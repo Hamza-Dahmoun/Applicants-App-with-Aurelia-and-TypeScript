@@ -15,5 +15,8 @@ export class App {
     let applicantIndex = this.applicants.findIndex(a=>a.ID==applicant.ID);
     this.applicants.splice(applicantIndex, 1);
   }
-  
+  addApplicant(){
+    let applicant:Applicant = new Applicant(4, "John", "Wick", "NY", "USA", "john.wich@gmail.com", 33, false);
+    this.applicants.push(applicant);
+  }
 }

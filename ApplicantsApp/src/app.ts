@@ -10,4 +10,10 @@ export class App {
       new Applicant(3, "Ahmed", "Mohamed", "Cairo", "Egypt", "ahmed.mohamed@gmail.com", 33, true)
     ]
   }
+
+  deleteApplicant(applicant:Applicant){
+    let applicantIndex = this.applicants.findIndex(a=>a.ID==applicant.ID);
+    this.applicants.splice(applicantIndex, 1);
+  }
+  
 }
